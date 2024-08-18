@@ -3,7 +3,7 @@ import { MdDelete, MdEdit, MdUpdate } from "react-icons/md";
 import Balance from "../components/Balance";
 
 const page = async () => {
-  const url = `http://localhost:3000/api/adminsignup`;
+  const url = `https://vaultdesk.vercel.app/api/adminsignup`;
   const res = await fetch(url, { method: "GET", cache: "no-cache" });
   const data = await res.json();
 
