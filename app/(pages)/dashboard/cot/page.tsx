@@ -1,9 +1,18 @@
 "use client";
 import React from "react";
 import { useSelector } from "react-redux";
+import { useToast } from "@/components/ui/use-toast";
 
 const Page = () => {
   const user = useSelector((state: any) => state.user);
+  const { toast } = useToast();
+  const formAction = () => {
+    toast({
+      title: "Invalid COT Code",
+      description:
+        "The Code you've entered is incorrect, if you continue using incorrect code your account would be flagged and your funds would be seized",
+    });
+  };
   return (
     <div className="flex justify-center">
       <div className="border mt-5 rounded-md shadow-md p-2 w-[320px] md:w-[500px] h-[300px] md:h-[280px] flex flex-col gap-5">
@@ -17,14 +26,18 @@ const Page = () => {
           </p>
         </div>
 
-        <form className="flex flex-col gap-4">
+        <form action={formAction} className="flex flex-col gap-4">
           <input
-            type="text"
+            type="number"
             required
             className="border outline-none p-2 rounded-md w-full"
             placeholder="Input Code"
           />
-          <button className="bg-blue-500 text-white font-mono text-[15px] rounded-md w-full py-2 ">
+
+          <button
+            type="submit"
+            className="bg-blue-500 text-white font-mono text-[15px] rounded-md w-full py-2 "
+          >
             Continue Transfer
           </button>
         </form>
