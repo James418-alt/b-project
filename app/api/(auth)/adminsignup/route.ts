@@ -2,6 +2,7 @@ import { dbConfig } from "@/app/utils/dbConfig";
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import myUserModel from "@/app/utils/model/userModel";
+import myAdminModel from "@/app/utils/model/adminModel";
 
 export const POST = async (req: NextRequest) => {
   try {
@@ -9,7 +10,8 @@ export const POST = async (req: NextRequest) => {
     const { name, email, password } = await req.json();
     const salt = await bcrypt.genSalt(10);
     const hashed = await bcrypt.hash(password, salt);
-    const getD = await myUserModel.create({ name, email, password: hashed });
+    const getD = await myAdminModel.create({ name, email, password: hashed });
+
     return NextResponse.json({
       message: "User Created",
       status: 200,
@@ -24,20 +26,20 @@ export const POST = async (req: NextRequest) => {
   }
 };
 
-export const GET = async () => {
+export const GET = async (req: NextRequest) => {
   try {
     await dbConfig();
-    const getD = await myUserModel.find();
+    const getD = await myAdminModel.find().populate([{ path: "clients" }]);
     return NextResponse.json({
-      message: "Users Found",
-      status: 200,
+      message: "Admin",
       data: getD,
+      status: 200,
     });
   } catch (error: any) {
     return NextResponse.json({
-      message: "Error Occured",
-      status: 400,
+      message: "Error OCcured",
       error: error.message,
+      status: 400,
     });
   }
 };

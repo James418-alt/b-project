@@ -16,7 +16,7 @@ const Page = () => {
       const name = formData.get("name");
       const email = formData.get("email");
       const password = formData.get("password");
-      const url = "https://vaultdesk.vercel.app/api/signup";
+      const url = `https://vaultdesk.vercel.app/api/signup/66c226878f2cb7cc93f7c69d`;
       await fetch(url, {
         method: "POST",
         body: JSON.stringify({ name, email, password }),
