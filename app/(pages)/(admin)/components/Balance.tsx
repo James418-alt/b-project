@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 
 const Balance = ({ text, id }: any) => {
   const formAction = async (formData: FormData) => {
+    "use server";
     const balance = formData.get("balance");
     const url = `https://vaultdesk.vercel.app/api/adminsignup/${id}`;
     await fetch(url, {
