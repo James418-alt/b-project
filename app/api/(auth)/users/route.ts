@@ -1,21 +1,19 @@
 import { dbConfig } from "@/app/utils/dbConfig";
-import myAdminModel from "@/app/utils/model/adminModel";
+import myUserModel from "@/app/utils/model/userModel";
 import { NextRequest, NextResponse } from "next/server";
 
-export const GET = async (req: NextRequest, { params }: any) => {
+export const GET = async (req: NextRequest) => {
   try {
     await dbConfig();
-    const { adminID } = await params;
-    const getD = await myAdminModel.findById(adminID).populate(["clients"]);
-
+    const getD = await myUserModel.find();
     return NextResponse.json({
-      message: "Admin",
+      message: "USers",
       data: getD,
       status: 200,
     });
   } catch (error: any) {
     return NextResponse.json({
-      message: "Error OCcured",
+      message: "Error Occured",
       error: error.message,
       status: 400,
     });
