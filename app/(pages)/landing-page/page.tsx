@@ -234,8 +234,6 @@ const page = () => {
           </div>
         </div>
       </section>
-
-      <Spinner />
     </div>
   );
 };
