@@ -148,7 +148,7 @@ const Page = () => {
           {show ? (
             <div className="w-full">
               <Oops
-                text={"Transfessd"}
+                text={"Transfer"}
                 style={
                   "bg-blue-500 w-full py-2 p-1 rounded-md text-white font-mono text-[14px]"
                 }
