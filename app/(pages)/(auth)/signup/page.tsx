@@ -21,7 +21,7 @@ const Page = () => {
         method: "POST",
         body: JSON.stringify({ name, email, password }),
       }).then(() => {
-        return redirect.push("/signin");
+        redirect.push("/signin");
       });
     } catch (error) {
       console.log(error);
