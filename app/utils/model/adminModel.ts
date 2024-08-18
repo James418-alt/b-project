@@ -1,8 +1,7 @@
-import { model } from "mongoose";
-import { models, Schema, Types } from "mongoose";
+import { models, Schema, Types, model } from "mongoose";
 import { iAdminData } from "../interface";
 
-const adminModel = new Schema(
+const adminModel = new Schema<iAdminData>(
   {
     name: { type: String },
     email: { type: String },

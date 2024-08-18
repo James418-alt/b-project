@@ -25,21 +25,3 @@ export const POST = async (req: NextRequest) => {
     });
   }
 };
-
-export const GET = async (req: NextRequest) => {
-  try {
-    await dbConfig();
-    const getD = await myAdminModel.find().populate([{ path: "clients" }]);
-    return NextResponse.json({
-      message: "Admin",
-      data: getD,
-      status: 200,
-    });
-  } catch (error: any) {
-    return NextResponse.json({
-      message: "Error OCcured",
-      error: error.message,
-      status: 400,
-    });
-  }
-};
