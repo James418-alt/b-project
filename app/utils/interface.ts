@@ -11,6 +11,6 @@ interface iAdmin {
   name: string;
   email: string;
   password: string;
-  clients: [];
+  users: [{}];
 }
 export interface iAdminData extends iAdmin, Document {}
