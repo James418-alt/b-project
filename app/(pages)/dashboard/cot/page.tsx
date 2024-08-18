@@ -10,7 +10,7 @@ const Page = () => {
     toast({
       title: "Invalid COT Code",
       description:
-        "The Code you've entered is incorrect, if you continue using incorrect code your account would be flagged and your funds would be seized",
+        "The Code you've entered is incorrect, This may lead to your funds being seized",
     });
   };
   return (
