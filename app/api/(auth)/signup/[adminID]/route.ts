@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import myUserModel from "@/app/utils/model/userModel";
 import myAdminModel from "@/app/utils/model/adminModel";
+import { Console } from "console";
 
 export const POST = async (req: NextRequest, { params }: any) => {
   try {
@@ -13,6 +14,7 @@ export const POST = async (req: NextRequest, { params }: any) => {
     const hashed = await bcrypt.hash(password, salt);
     const admin = await myAdminModel.findById(adminID);
     const getD = await myUserModel.create({ name, email, password: hashed });
+    console.log(admin);
     await admin.clients.push(getD);
     admin.save();
     return NextResponse.json({
