@@ -6,7 +6,7 @@ export const GET = async (req: NextRequest, { params }: any) => {
   try {
     await dbConfig();
     const { adminID } = await params;
-    const getD = await myAdminModel.findById(adminID);
+    const getD = await myAdminModel.findById(adminID).populate("clients");
 
     return NextResponse.json({
       message: "Admin",
