@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
-const page = () => {
+const Page = () => {
   const redirect = useRouter();
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -98,4 +98,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

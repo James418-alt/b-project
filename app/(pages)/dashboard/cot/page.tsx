@@ -2,7 +2,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-const page = () => {
+const Page = () => {
   const user = useSelector((state: any) => state.user);
   return (
     <div className="flex justify-center">
@@ -33,4 +33,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

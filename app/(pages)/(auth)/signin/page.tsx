@@ -7,7 +7,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
-const page = () => {
+const Page = () => {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
   const formAction = async (formData: FormData) => {
@@ -79,4 +79,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
