@@ -13,7 +13,7 @@ export const options: NextAuthOptions = {
         password: { name: "password", type: "password" },
       },
       async authorize(credentials) {
-        const url = "http://localhost:3000/api/signin";
+        const url = "https://vaultdesk.vercel.ap0/api/signin";
         const res = await fetch(url, {
           method: "POST",
           body: JSON.stringify(credentials),
