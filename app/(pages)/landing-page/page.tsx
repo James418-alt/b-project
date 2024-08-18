@@ -195,8 +195,8 @@ const page = () => {
           <div className=" flex flex-col gap-3">
             <h1 className="font-semibold text-[13px] text-white">BANKING</h1>
             <div className="flex flex-col gap-4 cursor-pointer">
-              {banking.map((el: any) => (
-                <p className="text-neutral-300 font-light text-[12px]">
+              {banking.map((el: any, id: number) => (
+                <p key={id} className="text-neutral-300 font-light text-[12px]">
                   {el.name}
                 </p>
               ))}
@@ -205,8 +205,8 @@ const page = () => {
           <div className=" flex flex-col gap-3">
             <h1 className="font-semibold text-[13px] text-white">SECURITY</h1>
             <div className="flex flex-col gap-4 cursor-pointer">
-              {security.map((el: any) => (
-                <p className="text-neutral-300 font-light text-[12px]">
+              {security.map((el: any, id: number) => (
+                <p key={id} className="text-neutral-300 font-light text-[12px]">
                   {el.name}
                 </p>
               ))}
@@ -215,8 +215,8 @@ const page = () => {
           <div className=" flex flex-col gap-3">
             <h1 className="font-semibold text-[13px] text-white">CONTACT US</h1>
             <div className="flex flex-col gap-4 cursor-pointer">
-              {contact.map((el: any) => (
-                <p className="text-neutral-300 font-light text-[12px]">
+              {contact.map((el: any, id: number) => (
+                <p key={id} className="text-neutral-300 font-light text-[12px]">
                   {el.name}
                 </p>
               ))}
@@ -225,8 +225,8 @@ const page = () => {
           <div className=" flex flex-col gap-3">
             <h1 className="font-semibold text-[13px] text-white">LEGAL</h1>
             <div className="flex flex-col gap-4 cursor-pointer">
-              {legal.map((el: any) => (
-                <p className="text-neutral-300 font-light text-[12px]">
+              {legal.map((el: any, id: number) => (
+                <p key={id} className="text-neutral-300 font-light text-[12px]">
                   {el.name}
                 </p>
               ))}

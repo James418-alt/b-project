@@ -6,9 +6,7 @@ import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaDollarSign } from "react-icons/fa6";
-import { useSelector } from "react-redux";
-
-const page = () => {
+const Page = () => {
   const [amount, setAmount]: any = useState();
   const [show, setShow] = useState(false);
   const session: any = useSession();
@@ -171,4 +169,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
