@@ -3,8 +3,8 @@ import { MdDelete, MdEdit, MdUpdate } from "react-icons/md";
 import Balance from "../components/Balance";
 
 const page = async () => {
-  const url = `https://vaultdesk.vercel.app/api/admin/66c226878f2cb7cc93f7c69d`;
-  //   const url = "http://localhost:3000/api/admin/66c226878f2cb7cc93f7c69d";
+  //   const url = `https://vaultdesk.vercel.app/api/admin/66c226878f2cb7cc93f7c69d`;
+  const url = "http://localhost:3000/api/admin/66c226878f2cb7cc93f7c69d";
   const res = await fetch(url, { method: "GET", cache: "no-cache" });
   const data = await res.json();
   console.log("data: ", data);
