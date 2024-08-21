@@ -98,7 +98,7 @@ const Page = () => {
               Routine Number
             </label>
             <input
-              type="text"
+              type="number"
               required
               className="border outline-none p-1 rounded-md"
             />

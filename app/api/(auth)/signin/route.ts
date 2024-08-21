@@ -7,7 +7,8 @@ export const POST = async (req: NextRequest) => {
   try {
     await dbConfig();
     const { email, password } = await req.json();
-    const user = await myUserModel.findOne({ email });
+    const mainEmail = email.toLowerCase();
+    const user = await myUserModel.findOne({ mainEmail });
     if (user) {
       const passCheck = await bcrypt.compare(password, user.password);
       if (passCheck) {

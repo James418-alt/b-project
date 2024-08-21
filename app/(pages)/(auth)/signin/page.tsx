@@ -38,6 +38,7 @@ const Page = () => {
                 className="border outline-none rounded-sm h-[35px] px-2"
                 type="text"
                 name="email"
+                required
               />
             </div>
             <div className="flex flex-col gap-0">
@@ -48,6 +49,7 @@ const Page = () => {
                   className="outline-none rounded-sm h-[35px] px-2 w-full"
                   type={show ? "text" : "password"}
                   name="password"
+                  required
                 />
 
                 {show ? (

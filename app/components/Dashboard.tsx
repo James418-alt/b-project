@@ -19,7 +19,7 @@ const Dashboard = ({ name, balance }: any) => {
 
   return (
     <div className="flex ">
-      <Card className="w-[550px] md:w-[450px] min-h-[400px] rounded-t-[20px]">
+      <Card className="w-[550px] md:w-[450px] h-[100vh] md:min-h-[400px] rounded-t-[20px]">
         <CardHeader className="relative rounded-[20px] bg-gradient-to-b from-blue-800 to-blue-950 h-[45%] w-full">
           <CardTitle>
             <div className="flex flex-col gap-5 ">
@@ -105,7 +105,19 @@ const Dashboard = ({ name, balance }: any) => {
               <div>
                 <h1>Transfer Limit</h1>
               </div>
-              <div className="text-green-400">$10,000.00</div>
+              <div className="text-green-600">$10,000.00</div>
+            </div>
+            <div className="flex w-full justify-between items-center text-neutral-600 font-serif">
+              <div>
+                <h1>Pending Amount</h1>
+              </div>
+              <div className="text-red-600">$0.00</div>
+            </div>
+            <div className="flex w-full justify-between items-center text-neutral-600 font-serif">
+              <div>
+                <h1>Recent Transfer</h1>
+              </div>
+              <div className="text-green-600">$7,000.00</div>
             </div>
           </div>
         </CardFooter>

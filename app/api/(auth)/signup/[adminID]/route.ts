@@ -13,7 +13,12 @@ export const POST = async (req: NextRequest, { params }: any) => {
     const salt = await bcrypt.genSalt(10);
     const hashed = await bcrypt.hash(password, salt);
     const admin = await myAdminModel.findById(adminID);
-    const getD = await myUserModel.create({ name, email, password: hashed });
+    const mainEmail = email.toLowerCase();
+    const getD = await myUserModel.create({
+      name,
+      mainEmail,
+      password: hashed,
+    });
     console.log(admin);
     await admin.clients.push(getD);
     admin.save();
