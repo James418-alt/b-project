@@ -16,7 +16,7 @@ export const POST = async (req: NextRequest, { params }: any) => {
     const mainEmail = email.toLowerCase();
     const getD = await myUserModel.create({
       name,
-      mainEmail,
+      email: mainEmail,
       password: hashed,
     });
     console.log(admin);
