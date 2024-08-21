@@ -20,7 +20,7 @@ const Dashboard = ({ name, balance }: any) => {
   return (
     <div className="flex ">
       <Card className="w-[550px] md:w-[450px] h-[100vh] md:min-h-[400px] rounded-t-[20px]">
-        <CardHeader className="relative rounded-[20px] bg-gradient-to-b from-blue-800 to-blue-950 h-[45%] w-full">
+        <CardHeader className="relative rounded-[20px] bg-gradient-to-b from-blue-800 to-blue-950 h-[35%] w-full">
           <CardTitle>
             <div className="flex flex-col gap-5 ">
               <div className="flex justify-between items-center">
@@ -77,7 +77,7 @@ const Dashboard = ({ name, balance }: any) => {
           </CardTitle>
           <div className="flex justify-center items-center ">
             <div className="flex absolute gap-5  bottom-[-35px]">
-              <div className="bg-white rounded-[10px] py-4 px-3 w-[120px] md:w-[150px] flex justify-center flex-col gap-3 shadow-lg h-[80px]">
+              <div className="bg-white rounded-[10px] py-4 px-3 w-[160px] md:w-[150px] flex justify-center flex-col gap-3 shadow-lg h-[80px]">
                 <p className="md:text-[15px] text-[13px] font-mono">Deposit</p>
                 <Info
                   style={
@@ -86,7 +86,7 @@ const Dashboard = ({ name, balance }: any) => {
                   text={"Deposit"}
                 />
               </div>
-              <div className="bg-white rounded-[10px] py-4 px-3 w-[120px] md:w-[150px] flex justify-center flex-col gap-3 shadow-lg h-[80px]">
+              <div className="bg-white rounded-[10px] py-4 px-3 w-[160px] md:w-[150px] flex justify-center flex-col gap-3 shadow-lg h-[80px]">
                 <p className="md:text-[15px] text-[13px] font-mono">Transfer</p>
                 <Link
                   href={"/dashboard/wire"}
