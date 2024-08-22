@@ -11,13 +11,13 @@ const page = async () => {
     cache: "no-cache",
   });
   const data = await res.json();
-  // console.log(data);
+  console.log(data.clients);
 
   return (
     <div>
       <div className=" border-[2px] border-black rounded-md p-1 h-[90vh] m-2">
         <h1>Clients</h1>
-        {data?.data?.map((el: any, id: number) => (
+        {data?.data[0]?.clients?.map((el: any, id: number) => (
           <div
             key={id}
             className="border mt-5 p-1 rounded-md flex justify-between items-center"
