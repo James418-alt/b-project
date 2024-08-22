@@ -31,6 +31,10 @@ const page = async () => {
                 {" "}
                 {el?.email}
               </p>
+              <p className="text-[12px] font-light text-neutral-500">
+                {" "}
+                ${el?.balance}
+              </p>
             </div>
             <div className=" flex items-center gap-3">
               <MdDelete />
