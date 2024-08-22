@@ -5,6 +5,7 @@ interface iUser {
   email: string;
   password: string;
   balance: string;
+  user: {};
 }
 export interface iUserData extends iUser, Document {}
 interface iAdmin {

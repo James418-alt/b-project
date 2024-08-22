@@ -6,7 +6,7 @@ const adminModel = new Schema<iAdminData>(
     name: { type: String },
     email: { type: String },
     password: { type: String },
-    clients: [{ type: Types.ObjectId, ref: "users" }],
+    clients: [{ type: Types.ObjectId, ref: "user" }],
   },
   { timestamps: true }
 );
