@@ -34,7 +34,12 @@ const Sider = () => {
       <SheetContent className="w-[200px]">
         <SheetHeader>
           <SheetDescription className="mt-[20px]">
-            <h1>{user?.data?.name}</h1>
+            <div className="flex justify-start items-start">
+              <Confirm text={"Log Out"} />
+            </div>
+            <h1 className="font-semibold text-[15px] mt-3">
+              {user?.data?.name}
+            </h1>
 
             <div className="mt-[30px] flex flex-col gap-10">
               <Link href={"/dashboard"} className="flex gap-1 items-center">
@@ -56,9 +61,6 @@ const Sider = () => {
             </div>
           </SheetDescription>
         </SheetHeader>
-        <div className="flex items-end h-full">
-          <Confirm text={"Log Out"} />
-        </div>
       </SheetContent>
     </Sheet>
   );
