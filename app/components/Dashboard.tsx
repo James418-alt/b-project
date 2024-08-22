@@ -117,7 +117,9 @@ const Dashboard = ({ name, balance }: any) => {
               <div>
                 <h1>Recent Transfer</h1>
               </div>
-              <div className="text-green-600">$7,000.00</div>
+              <div className="text-green-600">
+                {Number(balance).toLocaleString().concat(".00")}
+              </div>
             </div>
           </div>
         </CardFooter>

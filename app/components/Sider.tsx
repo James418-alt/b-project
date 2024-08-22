@@ -56,7 +56,7 @@ const Sider = () => {
             </div>
           </SheetDescription>
         </SheetHeader>
-        <div className=" mt-[200px] md:mt-[280px] ">
+        <div className="flex items-end h-full">
           <Confirm text={"Log Out"} />
         </div>
       </SheetContent>
