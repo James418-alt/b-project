@@ -118,7 +118,7 @@ const Dashboard = ({ name, balance }: any) => {
                 <h1>Recent Transfer</h1>
               </div>
               <div className="text-green-600">
-                {Number(balance).toLocaleString().concat(".00")}
+                ${Number(balance).toLocaleString().concat(".00")}
               </div>
             </div>
           </div>

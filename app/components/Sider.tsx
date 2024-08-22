@@ -34,10 +34,10 @@ const Sider = () => {
       <SheetContent className="w-[200px]">
         <SheetHeader>
           <SheetDescription className="mb-[20px]">
-            <h1 className="font-semibold text-[15px] mt-3">
+            <h1 className="font-semibold text-[15px] mb-3">
               {user?.data?.name}
             </h1>
-            <div className="flex justify-start items-start">
+            <div className="flex justify-start items-start mt-3">
               <Confirm text={"Log Out"} />
             </div>
 
